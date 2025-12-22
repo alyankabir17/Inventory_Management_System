@@ -32,7 +32,8 @@ namespace InventoryManagementSystem.Controllers
                 TotalAmount = product.UnitPrice
             };
 
-            ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name");
+            // Load favorite customers for dropdown
+            ViewBag.FavoriteCustomers = new SelectList(_context.FavoriteCustomers, "Id", "Name");
             ViewBag.ProductName = product.Name;
             ViewBag.StockAvailable = product.Quantity;
             ViewBag.UnitPrice = product.UnitPrice;
@@ -57,16 +58,33 @@ namespace InventoryManagementSystem.Controllers
 
             if (ModelState.IsValid)
             {
-                // === NEW CODE HERE ===
-                // 1. Save the current Unit Price into the Sale record
                 sale.SoldPrice = product.UnitPrice;
-
-                // 2. Calculate Total based on that price
                 sale.TotalAmount = sale.Quantity * sale.SoldPrice;
-                // =====================
-
                 sale.SaleDate = DateTime.Now;
 
+                // Check if this is a favorite customer purchase
+                if (sale.FavoriteCustomerId.HasValue && sale.FavoriteCustomerId.Value > 0)
+                {
+                    var favoriteCustomer = await _context.FavoriteCustomers.FindAsync(sale.FavoriteCustomerId.Value);
+                    if (favoriteCustomer != null)
+                    {
+                        sale.IsFavoriteCustomer = true;
+                        sale.CustomerName = favoriteCustomer.Name;
+                        
+                        // Update favorite customer purchase statistics
+                        favoriteCustomer.TotalPurchaseAmount += sale.TotalAmount;
+                        favoriteCustomer.TotalPurchaseCount += 1;
+                        favoriteCustomer.LastPurchaseDate = DateTime.Now;
+                        
+                        _context.FavoriteCustomers.Update(favoriteCustomer);
+                    }
+                }
+                else
+                {
+                    sale.IsFavoriteCustomer = false;
+                }
+
+                // Update product quantity
                 product.Quantity = product.Quantity - sale.Quantity;
 
                 _context.Sales.Add(sale);
@@ -77,7 +95,8 @@ namespace InventoryManagementSystem.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name", sale.CustomerId);
+            // Reload data for view in case of validation errors
+            ViewBag.FavoriteCustomers = new SelectList(_context.FavoriteCustomers, "Id", "Name", sale.FavoriteCustomerId);
             ViewBag.ProductName = product.Name;
             ViewBag.StockAvailable = product.Quantity;
             ViewBag.UnitPrice = product.UnitPrice;

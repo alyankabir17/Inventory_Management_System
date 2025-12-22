@@ -18,14 +18,15 @@ namespace InventoryManagementSystem.Controllers
         // GET: Sale
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Sales.ToListAsync());
+            var sales = await _context.Sales.ToListAsync();
+            return View(sales);
         }
 
         // GET: Sale/Create
         public IActionResult Create()
         {
             ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name");
-            ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name");
+            ViewBag.FavoriteCustomers = new SelectList(_context.FavoriteCustomers, "Id", "Name");
             return View();
         }
 
@@ -45,6 +46,29 @@ namespace InventoryManagementSystem.Controllers
                 }
                 else if (ModelState.IsValid)
                 {
+                    // Set sale price and calculate total
+                    sale.SoldPrice = product.UnitPrice;
+                    sale.TotalAmount = sale.Quantity * sale.SoldPrice;
+                    sale.SaleDate = DateTime.Now;
+
+                    // Check if this is a favorite customer purchase
+                    if (sale.FavoriteCustomerId.HasValue && sale.FavoriteCustomerId.Value > 0)
+                    {
+                        var favoriteCustomer = await _context.FavoriteCustomers.FindAsync(sale.FavoriteCustomerId.Value);
+                        if (favoriteCustomer != null)
+                        {
+                            sale.IsFavoriteCustomer = true;
+                            sale.CustomerName = favoriteCustomer.Name;
+                            
+                            // Update favorite customer statistics
+                            favoriteCustomer.TotalPurchaseAmount += sale.TotalAmount;
+                            favoriteCustomer.TotalPurchaseCount += 1;
+                            favoriteCustomer.LastPurchaseDate = DateTime.Now;
+                            
+                            _context.FavoriteCustomers.Update(favoriteCustomer);
+                        }
+                    }
+
                     // 1. Create Sale Record
                     _context.Add(sale);
 
@@ -58,7 +82,7 @@ namespace InventoryManagementSystem.Controllers
             }
 
             ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name", sale.ProductId);
-            ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "Name", sale.CustomerId);
+            ViewBag.FavoriteCustomers = new SelectList(_context.FavoriteCustomers, "Id", "Name", sale.FavoriteCustomerId);
             return View(sale);
         }
     }

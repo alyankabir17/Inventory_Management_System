@@ -1,0 +1,144 @@
+@model InventoryManagementSystem.Models.Entities.StaffMember
+
+@{
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+    ViewData["Title"] = "Staff Member Details";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card border-0 shadow-lg">
+                <div class="card-header bg-info text-white p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="mb-1 fw-bold">
+                                <i class="fa fa-id-card me-2"></i>@Model.FullName
+                            </h3>
+                            <p class="mb-0 opacity-75">@Model.Position - @Model.Department</p>
+                        </div>
+                        <div>
+                            @if (Model.IsActive)
+                            {
+                                <span class="badge bg-success fs-6 px-3 py-2">Active</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger fs-6 px-3 py-2">Inactive</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row">
+                        <!-- Personal Information -->
+                        <div class="col-md-6 mb-4">
+                            <h5 class="fw-bold text-primary mb-3">
+                                <i class="fa fa-user me-2"></i>Personal Information
+                            </h5>
+                            <div class="mb-3">
+                                <label class="text-muted small">Full Name</label>
+                                <p class="fw-semibold">@Model.FullName</p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-muted small">Email</label>
+                                <p><i class="fa fa-envelope text-primary me-2"></i>@Model.Email</p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-muted small">Cell Number</label>
+                                <p><i class="fa fa-phone text-primary me-2"></i>@Model.CellNumber</p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-muted small">Address</label>
+                                <p><i class="fa fa-location-dot text-primary me-2"></i>@(Model.Address ?? "N/A")</p>
+                            </div>
+                        </div>
+
+                        <!-- Employment Information -->
+                        <div class="col-md-6 mb-4">
+                            <h5 class="fw-bold text-primary mb-3">
+                                <i class="fa fa-briefcase me-2"></i>Employment Information
+                            </h5>
+                            <div class="mb-3">
+                                <label class="text-muted small">Position</label>
+                                <p><span class="badge bg-info">@Model.Position</span></p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-muted small">Department</label>
+                                <p><span class="badge bg-secondary">@Model.Department</span></p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-muted small">Monthly Salary</label>
+                                <p class="fw-bold text-success fs-4">$@Model.Salary.ToString("N2")</p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="text-muted small">Date of Joining</label>
+                                <p>@Model.DateOfJoining.ToString("MMMM dd, yyyy")</p>
+                            </div>
+                            @if (Model.DateOfLeaving.HasValue)
+                            {
+                                <div class="mb-3">
+                                    <label class="text-muted small">Date of Leaving</label>
+                                    <p class="text-danger">@Model.DateOfLeaving.Value.ToString("MMMM dd, yyyy")</p>
+                                </div>
+                            }
+                            <div class="mb-3">
+                                <label class="text-muted small">Years of Service</label>
+                                <p><span class="badge bg-primary">@Model.YearsOfService years</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.Notes))
+                    {
+                        <hr class="my-4" />
+                        <div>
+                            <h5 class="fw-bold text-primary mb-3">
+                                <i class="fa fa-sticky-note me-2"></i>Notes
+                            </h5>
+                            <p class="text-muted">@Model.Notes</p>
+                        </div>
+                    }
+
+                    <hr class="my-4" />
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-lg">
+                            <i class="fa fa-arrow-left me-2"></i>Back to List
+                        </a>
+                        <div class="d-flex gap-2">
+                            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning btn-lg text-dark">
+                                <i class="fa fa-edit me-2"></i>Edit
+                            </a>
+                            @if (Model.IsActive)
+                            {
+                                <form asp-action="Deactivate" asp-route-id="@Model.Id" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to deactivate this staff member?');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-danger btn-lg">
+                                        <i class="fa fa-user-slash me-2"></i>Deactivate
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form asp-action="Reactivate" asp-route-id="@Model.Id" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to reactivate this staff member?');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-success btn-lg">
+                                        <i class="fa fa-user-check me-2"></i>Reactivate
+                                    </button>
+                                </form>
+                                <form asp-action="Delete" asp-route-id="@Model.Id" method="post" class="d-inline" onsubmit="return confirm('?? WARNING: This will permanently delete this staff member from the database. This action cannot be undone!\n\nAre you absolutely sure you want to delete @Model.FullName?');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-danger btn-lg">
+                                        <i class="fa fa-trash me-2"></i>Permanently Delete
+                                    </button>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

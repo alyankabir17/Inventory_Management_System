@@ -8,32 +8,99 @@
 <div class="container mt-4">
     <div class="card shadow-sm">
         <div class="card-header bg-dark text-white">
-            <h3 class="mb-0">Record New Sale</h3>
+            <h3 class="mb-0"><i class="fa fa-plus-circle me-2"></i>Record New Sale</h3>
         </div>
         <div class="card-body">
             <form asp-action="Create">
 
                 <div class="mb-3">
                     <label class="form-label fw-bold">Select Product</label>
-                    <select asp-for="ProductId" class="form-control" asp-items="ViewBag.ProductId"></select>
+                    <select asp-for="ProductId" class="form-control" asp-items="ViewBag.ProductId">
+                        <option value="">-- Select product --</option>
+                    </select>
+                </div>
+
+                <!-- Customer Type Selection -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Customer Type</label>
+                    <div class="btn-group w-100" role="group">
+                        <input type="radio" class="btn-check" name="customerType" id="favoriteCustomer" value="favorite" checked>
+                        <label class="btn btn-outline-primary" for="favoriteCustomer">
+                            <i class="fa fa-star me-2"></i>Favorite Customer
+                        </label>
+                        <input type="radio" class="btn-check" name="customerType" id="walkInCustomer" value="walkin">
+                        <label class="btn btn-outline-primary" for="walkInCustomer">
+                            <i class="fa fa-user me-2"></i>Walk-in Customer
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Favorite Customer Selection -->
+                <div id="favoriteCustomerSection" class="mb-3">
+                    <label asp-for="FavoriteCustomerId" class="form-label fw-bold">Select Registered Customer</label>
+                    <select asp-for="FavoriteCustomerId" class="form-control" asp-items="ViewBag.FavoriteCustomers">
+                        <option value="">-- Select customer --</option>
+                    </select>
+                </div>
+
+                <!-- Manual Entry Section -->
+                <div id="manualEntrySection" class="mb-3" style="display: none;">
+                    <label asp-for="CustomerName" class="form-label fw-bold">Customer Name</label>
+                    <input asp-for="CustomerName" class="form-control" type="text" placeholder="Enter customer name" maxlength="100" />
+                    <span asp-validation-for="CustomerName" class="text-danger"></span>
+                    
+                    <label asp-for="CustomerContact" class="form-label fw-bold mt-2">Contact (Optional)</label>
+                    <input asp-for="CustomerContact" class="form-control" type="text" placeholder="Phone or Email" maxlength="100" />
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label fw-bold">Select Customer</label>
-                    <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
-                </div>
-
-                <div class="mb-3">
-                    <label asp-for="Quantity" class="form-label fw-bold"></label>
+                    <label asp-for="Quantity" class="form-label fw-bold">Quantity</label>
                     <input asp-for="Quantity" class="form-control" type="number" min="1" />
                     <span asp-validation-for="Quantity" class="text-danger"></span>
                 </div>
 
                 <div class="d-flex gap-2">
-                    <button type="submit" class="btn btn-success">Complete Sale</button>
-                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-check me-2"></i>Complete Sale</button>
+                    <a asp-action="Index" class="btn btn-secondary"><i class="fa fa-times me-2"></i>Cancel</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const favoriteRadio = document.getElementById('favoriteCustomer');
+            const walkInRadio = document.getElementById('walkInCustomer');
+            const favoriteSection = document.getElementById('favoriteCustomerSection');
+            const manualSection = document.getElementById('manualEntrySection');
+            const favoriteDropdown = document.querySelector('select[name="FavoriteCustomerId"]');
+            const customerNameInput = document.querySelector('input[name="CustomerName"]');
+
+            function toggleSections() {
+                if (favoriteRadio.checked) {
+                    favoriteSection.style.display = 'block';
+                    manualSection.style.display = 'none';
+                    favoriteDropdown.value = '';
+                    customerNameInput.value = '';
+                } else {
+                    favoriteSection.style.display = 'none';
+                    manualSection.style.display = 'block';
+                    favoriteDropdown.value = '';
+                }
+            }
+
+            favoriteRadio.addEventListener('change', toggleSections);
+            walkInRadio.addEventListener('change', toggleSections);
+
+            favoriteDropdown.addEventListener('change', function() {
+                if (this.value) {
+                    customerNameInput.value = this.options[this.selectedIndex].text;
+                }
+            });
+
+            toggleSections();
+        });
+    </script>
+}

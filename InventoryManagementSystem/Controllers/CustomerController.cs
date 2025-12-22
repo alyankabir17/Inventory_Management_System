@@ -16,7 +16,7 @@ namespace InventoryManagementSystem.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Customers.ToListAsync());
+            return View(await _context.FavoriteCustomers.ToListAsync());
         }
 
         public IActionResult Create()
@@ -26,7 +26,7 @@ namespace InventoryManagementSystem.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Customer customer)
+        public async Task<IActionResult> Create(FavoriteCustomer customer)
         {
             if (ModelState.IsValid)
             {

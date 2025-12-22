@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // 1. Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddRazorRuntimeCompilation(); // Enable runtime view compilation
 
 // Registering ApplicationDbContext
 builder.Services.AddDbContext<ApplicationDbContext>(
@@ -19,9 +20,37 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+//A helper tool that allows your .cshtml views or other classes to 
+//access the "Session" or "Logged-in User" data easily.
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
+
+// Seed hardcoded admin account
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    
+    // Apply any pending migrations
+    context.Database.Migrate();
+    
+    // Check if admin exists
+    if (!context.Staff.Any(u => u.Username == "admin"))
+    {
+        context.Staff.Add(new InventoryManagementSystem.Models.Entities.Staff
+        {
+            FirstName = "System",
+            LastName = "Administrator",
+            Email = "admin@ims.com",
+            Username = "admin",
+            Password = "admin123", // In production, this should be hashed
+            Role = "Admin" // Set admin role
+        });
+        context.SaveChanges();
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

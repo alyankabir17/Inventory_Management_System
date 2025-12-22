@@ -1,30 +1,86 @@
-﻿@model IEnumerable<InventoryManagementSystem.Models.Entities.Customer>
+﻿@model IEnumerable<InventoryManagementSystem.Models.Entities.FavoriteCustomer>
 @{
-    Layout = "~/Views/Shared/_DashLayout.cshtml"; ViewData["Title"] = "Customers";
+    Layout = "~/Views/Shared/_DashLayout.cshtml"; 
+    ViewData["Title"] = "Favorite Customers";
 }
 
 <div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-3 bg-dark text-white p-3 rounded">
-        <h2 class="mb-0 fw-bold">Customers List</h2>
+    <div class="d-flex justify-content-between align-items-center mb-3 rounded shadow-sm p-4" 
+         style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
         <div>
-            <a asp-controller="Dashboard" asp-action="Index" class="btn btn-outline-light me-2">&larr; Back</a>
-            <a asp-action="Create" class="btn btn-primary">Add Customer</a>
+            <h2 class="mb-1 fw-bold text-white">
+                <i class="fa fa-star me-2"></i>Favorite Customers
+            </h2>
+            <p class="mb-0 text-white opacity-75">Manage your valued customer relationships and track their purchases</p>
+        </div>
+        <div>
+            <a asp-controller="Dashboard" asp-action="Index" class="btn btn-light me-2">
+                <i class="fa fa-arrow-left me-2"></i>Dashboard
+            </a>
+            <a asp-action="Create" class="btn btn-warning text-dark fw-bold shadow">
+                <i class="fa fa-user-plus me-2"></i>Add Customer
+            </a>
         </div>
     </div>
-    <table class="table table-striped table-bordered">
-        <thead>
-            <tr><th>Name</th><th>Email</th><th>Phone</th><th>Address</th></tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.Name</td>
-                    <td>@item.Email</td>
-                    <td>@item.Phone</td>
-                    <td>@item.Address</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="fw-bold"><i class="fa fa-user me-2 text-primary"></i>Name</th>
+                            <th class="fw-bold"><i class="fa fa-envelope me-2 text-primary"></i>Email</th>
+                            <th class="fw-bold"><i class="fa fa-phone me-2 text-primary"></i>Phone</th>
+                            <th class="fw-bold"><i class="fa fa-location-dot me-2 text-primary"></i>Address</th>
+                            <th class="fw-bold text-center"><i class="fa fa-shopping-cart me-2 text-success"></i>Purchases</th>
+                            <th class="fw-bold text-center"><i class="fa fa-dollar-sign me-2 text-success"></i>Total Value</th>
+                            <th class="fw-bold text-center"><i class="fa fa-clock me-2 text-info"></i>Last Purchase</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="align-middle fw-semibold">
+                                        <i class="fa fa-star text-warning me-2"></i>@item.Name
+                                    </td>
+                                    <td class="align-middle">@item.Email</td>
+                                    <td class="align-middle">@item.Phone</td>
+                                    <td class="align-middle">@item.Address</td>
+                                    <td class="align-middle text-center">
+                                        <span class="badge bg-primary">@item.TotalPurchaseCount orders</span>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <span class="badge bg-success fs-6">$@item.TotalPurchaseAmount.ToString("N2")</span>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        @if (item.LastPurchaseDate.HasValue)
+                                        {
+                                            <small class="text-muted">@item.LastPurchaseDate.Value.ToShortDateString()</small>
+                                        }
+                                        else
+                                        {
+                                            <small class="text-muted">Never</small>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="7" class="text-center py-5 text-muted">
+                                    <i class="fa fa-users fa-3x mb-3 d-block opacity-25"></i>
+                                    <p class="mb-0">No favorite customers yet. Click "Add Customer" to get started.</p>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>

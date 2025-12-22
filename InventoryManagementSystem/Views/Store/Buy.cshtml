@@ -5,41 +5,120 @@
     ViewData["Title"] = "Checkout";
 }
 
-<div class="container mt-5 col-md-6">
-    <div class="card shadow">
-        <div class="card-header bg-success text-white">
-            <h3 class="mb-0">Checkout: @ViewBag.ProductName</h3>
-        </div>
-        <div class="card-body">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-0 shadow-lg">
+                <div class="card-header text-white p-4" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-shopping-cart fa-2x me-3"></i>
+                        <div>
+                            <h3 class="mb-1 fw-bold">Checkout</h3>
+                            <p class="mb-0 small opacity-75">Complete the purchase for: <strong>@ViewBag.ProductName</strong></p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="alert alert-info d-flex justify-content-between">
-                <span>Price per unit: <strong>$@ViewBag.UnitPrice</strong></span>
-                <span>Available Stock: <strong>@ViewBag.StockAvailable</strong></span>
+                <div class="card-body p-4">
+                    <!-- Product Info -->
+                    <div class="alert alert-info border-0 d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <i class="fa fa-tag me-2"></i>
+                            <span class="fw-bold">Price per unit:</span>
+                            <span class="fs-5 text-success fw-bold ms-2">$@ViewBag.UnitPrice.ToString("N2")</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-boxes-stacked me-2"></i>
+                            <span class="fw-bold">Available:</span>
+                            <span class="badge bg-primary fs-6 ms-2">@ViewBag.StockAvailable units</span>
+                        </div>
+                    </div>
+
+                    <form asp-action="Buy" method="post" id="saleForm">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="ProductId" />
+
+                        <!-- Customer Type Selection -->
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">
+                                <i class="fa fa-users me-2 text-primary"></i>Customer Type
+                            </label>
+                            <div class="btn-group w-100" role="group">
+                                <input type="radio" class="btn-check" name="customerType" id="favoriteCustomer" value="favorite" checked>
+                                <label class="btn btn-outline-primary" for="favoriteCustomer">
+                                    <i class="fa fa-star me-2"></i>Favorite Customer
+                                </label>
+                                <input type="radio" class="btn-check" name="customerType" id="walkInCustomer" value="walkin">
+                                <label class="btn btn-outline-primary" for="walkInCustomer">
+                                    <i class="fa fa-user me-2"></i>Walk-in Customer
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Favorite Customer Selection (Default) -->
+                        <div id="favoriteCustomerSection" class="mb-4">
+                            <label asp-for="FavoriteCustomerId" class="form-label fw-bold">
+                                <i class="fa fa-star me-2 text-warning"></i>Select Registered Customer
+                            </label>
+                            <select asp-for="FavoriteCustomerId" class="form-select form-select-lg" asp-items="ViewBag.FavoriteCustomers">
+                                <option value="">-- Select a favorite customer --</option>
+                            </select>
+                            <small class="text-muted">
+                                <i class="fa fa-info-circle me-1"></i>
+                                Purchase will be tracked for this customer
+                            </small>
+                        </div>
+
+                        <!-- Manual Entry Section (Hidden by default) -->
+                        <div id="manualEntrySection" class="mb-4" style="display: none;">
+                            <div class="row">
+                                <div class="col-md-8 mb-3">
+                                    <label asp-for="CustomerName" class="form-label fw-bold">
+                                        <i class="fa fa-user me-2 text-primary"></i>Customer Name
+                                    </label>
+                                    <input asp-for="CustomerName" class="form-control form-control-lg" 
+                                           type="text" 
+                                           placeholder="Enter customer name" 
+                                           maxlength="100" />
+                                    <span asp-validation-for="CustomerName" class="text-danger small"></span>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="CustomerContact" class="form-label fw-bold">
+                                        <i class="fa fa-phone me-2 text-primary"></i>Contact (Optional)
+                                    </label>
+                                    <input asp-for="CustomerContact" class="form-control form-control-lg" 
+                                           type="text" 
+                                           placeholder="Phone/Email" 
+                                           maxlength="100" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Quantity" class="form-label fw-bold">
+                                <i class="fa fa-calculator me-2 text-primary"></i>Quantity to Purchase
+                            </label>
+                            <input asp-for="Quantity" class="form-control form-control-lg" 
+                                   type="number" min="1" max="@ViewBag.StockAvailable" 
+                                   placeholder="Enter quantity" />
+                            <span asp-validation-for="Quantity" class="text-danger fw-bold d-block mt-2"></span>
+                            <small class="text-muted">
+                                <i class="fa fa-info-circle me-1"></i>
+                                Maximum available: @ViewBag.StockAvailable units
+                            </small>
+                        </div>
+
+                        <div class="d-grid gap-3">
+                            <button type="submit" class="btn btn-success btn-lg py-3">
+                                <i class="fa fa-check-circle me-2"></i>Complete Purchase
+                            </button>
+                            <a asp-action="Index" class="btn btn-outline-secondary btn-lg">
+                                <i class="fa fa-arrow-left me-2"></i>Back to Store
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <form asp-action="Buy" method="post">
-                <input type="hidden" asp-for="ProductId" />
-
-                <div class="mb-3">
-                    <label class="form-label fw-bold">Select Customer</label>
-                    <select asp-for="CustomerId" class="form-select" asp-items="ViewBag.CustomerId">
-                        <option value="">-- Choose Customer --</option>
-                    </select>
-                    <span asp-validation-for="CustomerId" class="text-danger"></span>
-                </div>
-
-                <div class="mb-3">
-                    <label asp-for="Quantity" class="form-label fw-bold">Quantity to Buy</label>
-                    <input asp-for="Quantity" class="form-control" type="number" min="1" />
-
-                    <span asp-validation-for="Quantity" class="text-danger fw-bold"></span>
-                </div>
-
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-success btn-lg">Confirm Purchase</button>
-                    <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
-                </div>
-            </form>
         </div>
     </div>
 </div>
@@ -48,4 +127,41 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const favoriteRadio = document.getElementById('favoriteCustomer');
+            const walkInRadio = document.getElementById('walkInCustomer');
+            const favoriteSection = document.getElementById('favoriteCustomerSection');
+            const manualSection = document.getElementById('manualEntrySection');
+            const favoriteDropdown = document.querySelector('select[name="FavoriteCustomerId"]');
+            const customerNameInput = document.querySelector('input[name="CustomerName"]');
+
+            function toggleSections() {
+                if (favoriteRadio.checked) {
+                    favoriteSection.style.display = 'block';
+                    manualSection.style.display = 'none';
+                    favoriteDropdown.required = false;
+                    customerNameInput.required = false;
+                } else {
+                    favoriteSection.style.display = 'none';
+                    manualSection.style.display = 'block';
+                    favoriteDropdown.required = false;
+                    favoriteDropdown.value = '';
+                    customerNameInput.required = true;
+                }
+            }
+
+            favoriteRadio.addEventListener('change', toggleSections);
+            walkInRadio.addEventListener('change', toggleSections);
+
+            // Set customer name when favorite customer is selected
+            favoriteDropdown.addEventListener('change', function() {
+                if (this.value) {
+                    customerNameInput.value = this.options[this.selectedIndex].text;
+                }
+            });
+
+            toggleSections();
+        });
+    </script>
 }

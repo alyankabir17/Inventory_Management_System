@@ -1,22 +1,71 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome";
+    Layout = null;
 }
 
-<div class="text-center container mt-5">
-    <h2 class="display-5 fw-bold">Welcome to</h2>
-    <h1 class="display-2 fw-bold text-primary">Inventory Management System</h1>
-    <p class="fs-5 fw-bold p-5">
-        Effortlessly track, manage, and optimize your inventory in real-time.
-        Let’s get started on streamlining your operations and boosting efficiency!
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMS | Secure Login</title>
 
-    <div class="d-flex justify-content-center gap-3">
-        <a asp-controller="User" asp-action="Login" class="btn btn-primary btn-lg px-5 shadow">
-            Login
-        </a>
-        <a asp-controller="User" asp-action="Signup" class="btn btn-outline-secondary btn-lg px-4 shadow">
-            Create Account
-        </a>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #212529, #0d6efd);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .welcome-card {
+            background: white;
+            border-radius: 20px;
+            max-width: 650px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<div class="welcome-card shadow-lg">
+
+    <div class="p-5 text-center bg-light border-bottom">
+        <i class="fa fa-boxes-stacked fa-4x text-primary mb-3"></i>
+        <h1 class="fw-bolder">Inventory Management System</h1>
+        <p class="text-muted fs-5">
+            Centralized control for products, suppliers, and sales.
+        </p>
+    </div>
+
+    <div class="p-5 text-center">
+        <p class="text-secondary mb-4">
+            Secure admin-only access ensures full control and accountability across inventory operations.
+        </p>
+
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+            <a asp-controller="User" asp-action="Login"
+               class="btn btn-primary btn-lg px-5 fw-bold shadow">
+                <i class="fa fa-lock me-2"></i>Login
+            </a>
+
+            <a asp-controller="User" asp-action="Signup"
+               class="btn btn-outline-dark btn-lg px-4 fw-bold">
+                <i class="fa fa-user-plus me-2"></i>Create Admin
+            </a>
+        </div>
+    </div>
+
+    <div class="bg-light text-center py-3 border-top">
+        <small class="text-muted">
+            &copy; 2025 Inventory Management System | Secure Access
+        </small>
     </div>
 
 </div>
+
+</body>
+</html>

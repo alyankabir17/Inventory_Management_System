@@ -1,51 +1,81 @@
 ﻿@using InventoryManagementSystem.Models.AddModels;
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
     Layout = "~/Views/Shared/_DashLayout.cshtml";
-    ViewData["Title"] = "Dashboard | Add New User";
+    ViewData["Title"] = "Add New Staff Member";
 }
 
-@model AddUser;
+@model AddStaff;
 
 <div class="container mt-5 mx-auto">
-    <div class="card border-rounded border-1 shadow-sm col-sm-12 col-lg-5 m-auto">
-        <div class="bg-dark text-light p-3">
-            <h2 class="text-center display-6 fw-bold">Add User Form</h2>
+    <div class="card border-0 shadow col-sm-12 col-lg-6 m-auto">
+        <div class="card-header text-light p-4"
+            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="text-center">
+                <i class="fa fa-user-plus fa-2x mb-2"></i>
+                <h2 class="fw-bold mb-1">Add Staff Member</h2>
+                <p class="mb-0 small opacity-75">Create a new staff account for system access</p>
+            </div>
         </div>
-        <form class="px-5 py-4" method="post">
-            <div class="mb-3">
-                <label for="FirstName" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="FirstName" name="FirstName" asp-for="FirstName" >
-            </div>
-            <div class="mb-3">
-                <label for="LastName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="LastName" name="LastName" asp-for="LastName">
-            </div>
-            <div class="mb-3">
-                <label for="Email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="Email" name="Email" asp-for="Email">
-            </div>
-            <div class="mb-3">
-                <label for="Username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="Username" name="Username" asp-for="Username">
-            </div>
-            <div class="mb-4">
-                <label for="Password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="Password" name="Password" asp-for="Password">
-            </div>
-            <div class="mb-4">
-                <label for="Role" class="form-label">Role</label>
-                <select class="form-control" id="Role" name="Role" asp-for="Role">
-                    <option selected disabled>Select Role</option>
-                    <option value="1">Admin</option>
-                    <option value="2">Manager</option>
-                </select>
-            </div>
-            <div class="d-flex align-items-center justify-content-center">
-                <button type="submit" class="btn btn-primary">Add User</button>
-            </div>
-        </form>
+
+        <div class="card-body p-4">
+            <form method="post" asp-action="Create" asp-controller="User">
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="FirstName" class="form-label fw-semibold">
+                            <i class="fa fa-user me-1 text-primary"></i>First Name
+                        </label>
+                        <input type="text" class="form-control" asp-for="FirstName" placeholder="Enter first name"
+                            required>
+                        <span asp-validation-for="FirstName" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="LastName" class="form-label fw-semibold">
+                            <i class="fa fa-user me-1 text-primary"></i>Last Name
+                        </label>
+                        <input type="text" class="form-control" asp-for="LastName" placeholder="Enter last name">
+                        <span asp-validation-for="LastName" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label fw-semibold">
+                        <i class="fa fa-envelope me-1 text-primary"></i>Email Address
+                    </label>
+                    <input type="email" class="form-control" asp-for="Email" placeholder="staff@example.com"
+                        required>
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label fw-semibold">
+                        <i class="fa fa-id-badge me-1 text-primary"></i>Username
+                    </label>
+                    <input type="text" class="form-control" asp-for="Username" placeholder="Choose a username"
+                        required>
+                    <span asp-validation-for="Username" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Password" class="form-label fw-semibold">
+                        <i class="fa fa-lock me-1 text-primary"></i>Password
+                    </label>
+                    <input type="password" class="form-control" asp-for="Password" placeholder="Create a strong password"
+                        required>
+                    <span asp-validation-for="Password" class="text-danger small"></span>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg py-3">
+                        <i class="fa fa-save me-2"></i>Create Staff Account
+                    </button>
+                    <a asp-action="Index" asp-controller="User" class="btn btn-outline-secondary">
+                        <i class="fa fa-arrow-left me-2"></i>Back to Staff List
+                    </a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

@@ -1,39 +1,11 @@
 ﻿using InventoryManagementSystem.Models;
-using InventoryManagementSystem.Models.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
+using System.Linq;
 
 namespace InventoryManagementSystem.Controllers
 {
     public class DashboardController : Controller
     {
-        private bool IsUser()
-        {
-            int? UserId = HttpContext.Session.GetInt32("UserId");
-            if (UserId == null)
-            {
-                return false;
-            } 
-            else
-            {
-                return true;
-            }
-        }
-
-        private int RoleCheck()
-        {
-            int? Role = HttpContext.Session.GetInt32("UserRole");
-            if (Role == null)
-            {
-                return 0;
-            }
-            else
-            {
-                return (int) Role;
-            }
-        }
-
         private readonly ApplicationDbContext db;
 
         public DashboardController(ApplicationDbContext _db)
@@ -41,33 +13,27 @@ namespace InventoryManagementSystem.Controllers
             db = _db;
         }
 
-        // GET: DashboardController
         public ActionResult Index()
         {
-            if (IsUser())
+            // Check if user is logged in
+            if (HttpContext.Session.GetInt32("UserId") == null)
             {
-                int Role = RoleCheck();
-
-                if (Role == 1 || Role == 2)
-                {
-                    ViewBag.UsersCount = db.Users.Count();
-                    ViewBag.ProductsCount = db.Products.Count();
-
-                    return View();
-                } 
-                else if (Role == 3 )
-                {
-                    return RedirectToAction("Index", "Store");
-                }
-                else
-                {
-                    return RedirectToAction("Index", "Home");
-                }
+                return RedirectToAction("Login", "User");
             }
-            else
-            {
-                return RedirectToAction("Index", "Home");
-            }
+
+            // Get dashboard statistics
+            ViewBag.Username = HttpContext.Session.GetString("Username") ?? "User";
+            ViewBag.UserRole = HttpContext.Session.GetString("UserRole") ?? "Staff";
+            ViewBag.ProductsCount = db.Products.Count();
+            ViewBag.LowStock = db.Products.Count(p => p.Quantity < 5);
+            ViewBag.TotalInventoryValue = db.Products.Sum(p => (decimal?)p.UnitPrice * p.Quantity) ?? 0;
+            
+            // Update to show StaffMembers count instead of Staff login accounts
+            ViewBag.UsersCount = db.StaffMembers.Count(s => s.IsActive);
+            ViewBag.FavoriteCustomersCount = db.FavoriteCustomers.Count();
+            ViewBag.TodaySales = db.Sales.Count(s => s.SaleDate.Date == DateTime.Today);
+
+            return View();
         }
     }
 }

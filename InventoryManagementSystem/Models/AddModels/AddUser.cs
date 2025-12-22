@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace InventoryManagementSystem.Models.AddModels
 {
-    public class AddUser
+    public class AddStaff
     {
         [Required]
         [DisplayName("First Name")]
@@ -18,7 +18,5 @@ namespace InventoryManagementSystem.Models.AddModels
         public String? Username { get; set; }
         [Required]
         public String? Password { get; set; }
-
-        public int Role { get; set; }
     }
 }

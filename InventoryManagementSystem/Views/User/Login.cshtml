@@ -1,30 +1,103 @@
-﻿@using InventoryManagementSystem.Models.Entities;
-@{
-    ViewData["Title"] = "IMS | Login Page";
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Login";
 }
-@model User;
 
-<div class="container mt-5 mx-auto">
-    <div class="card border-rounded border-1 shadow-sm col-sm-12 col-lg-5 m-auto">
-        <div class="bg-dark text-light p-3">
-            <h2 class="text-center display-6 fw-bold">Login Form</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login - IMS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .auth-card {
+            border-radius: 20px;
+            max-width: 450px;
+            backdrop-filter: blur(10px);
+        }
+
+        .auth-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+
+    <div class="card auth-card shadow-lg p-5 bg-white">
+        <div class="text-center mb-4">
+            <div class="bg-primary bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                 style="width: 80px; height: 80px;">
+                <i class="fa fa-shield-halved fa-2x text-white"></i>
+            </div>
+            <h2 class="fw-bold mb-2">Admin Portal</h2>
+            <p class="text-muted mb-0">Inventory Management System</p>
         </div>
 
-        <form class="px-5 py-4" method="post" asp-action="Login" asp-controller="User">
+        <form method="post" asp-action="Login" asp-controller="User">
+            @Html.AntiForgeryToken()
 
-            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fa fa-circle-exclamation me-2"></i>@ViewBag.Error
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
 
             <div class="mb-3">
-                <label for="Username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="Username" name="Username" asp-for="Username">
+                <label class="form-label fw-semibold text-secondary">
+                    <i class="fa fa-user me-1"></i>Username
+                </label>
+                <input type="text" name="Username" class="form-control form-control-lg" 
+                       placeholder="Enter your username" required autofocus />
             </div>
+
             <div class="mb-4">
-                <label for="Password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="Password" name="Password" asp-for="Password">
+                <label class="form-label fw-semibold text-secondary">
+                    <i class="fa fa-lock me-1"></i>Password
+                </label>
+                <input type="password" name="Password" class="form-control form-control-lg" 
+                       placeholder="Enter your password" required />
             </div>
-            <div class="d-flex align-items-center justify-content-center">
-                <button type="submit" class="btn btn-primary">Login</button>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg py-3 fw-bold">
+                    <i class="fa fa-arrow-right-to-bracket me-2"></i>Sign In
+                </button>
+            </div>
+
+            <div class="text-center mt-4 pt-3 border-top">
+                <p class="text-muted small mb-0">
+                    <i class="fa fa-shield-halved me-1"></i>
+                    Secure access to inventory management system
+                </p>
             </div>
         </form>
     </div>
-</div>
+
+</body>
+</html>

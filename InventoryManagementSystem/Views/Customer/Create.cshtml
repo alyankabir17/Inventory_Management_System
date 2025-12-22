@@ -1,33 +1,71 @@
-﻿@model InventoryManagementSystem.Models.Entities.Customer
+﻿@model InventoryManagementSystem.Models.Entities.FavoriteCustomer
 @{
-    Layout = "~/Views/Shared/_DashLayout.cshtml"; ViewData["Title"] = "Add Customer";
+    Layout = "~/Views/Shared/_DashLayout.cshtml"; 
+    ViewData["Title"] = "Add Favorite Customer";
 }
 
-<div class="container mt-4">
-    <h3>Add New Customer</h3>
-    <div class="card p-4 shadow-sm">
-        <form asp-action="Create" method="post">
-            <div class="mb-3">
-                <label asp-for="Name" class="form-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+<div class="container mt-5 mx-auto">
+    <div class="card border-0 shadow col-sm-12 col-lg-6 m-auto">
+        <div class="card-header text-light p-4" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <div class="text-center">
+                <i class="fa fa-star fa-2x mb-2"></i>
+                <h3 class="fw-bold mb-1">Add Favorite Customer</h3>
+                <p class="mb-0 small opacity-75">Create a new valued customer profile</p>
             </div>
-            <div class="mb-3">
-                <label asp-for="Email" class="form-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Phone" class="form-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Address" class="form-label"></label>
-                <input asp-for="Address" class="form-control" />
-            </div>
-            <button type="submit" class="btn btn-success">Save</button>
-            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
-        </form>
+        </div>
+
+        <div class="card-body p-4">
+            <form asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label fw-semibold">
+                        <i class="fa fa-user me-1 text-primary"></i>Customer Name
+                    </label>
+                    <input asp-for="Name" class="form-control" placeholder="Enter full name" required />
+                    <span asp-validation-for="Name" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label fw-semibold">
+                        <i class="fa fa-envelope me-1 text-primary"></i>Email Address
+                    </label>
+                    <input asp-for="Email" type="email" class="form-control" placeholder="customer@example.com" />
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Phone" class="form-label fw-semibold">
+                        <i class="fa fa-phone me-1 text-primary"></i>Phone Number
+                    </label>
+                    <input asp-for="Phone" class="form-control" placeholder="+1 (555) 123-4567" />
+                    <span asp-validation-for="Phone" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Address" class="form-label fw-semibold">
+                        <i class="fa fa-location-dot me-1 text-primary"></i>Address
+                    </label>
+                    <textarea asp-for="Address" class="form-control" rows="3" 
+                              placeholder="Enter complete address"></textarea>
+                    <span asp-validation-for="Address" class="text-danger small"></span>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success btn-lg py-3">
+                        <i class="fa fa-save me-2"></i>Save Customer
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        <i class="fa fa-times me-2"></i>Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
