@@ -25,6 +25,12 @@
                 <textarea class="form-control" name="Description" id="Description" asp-for="Description" row="7"></textarea>
             </div>
             <div class="mb-3">
+                <label for="CategoryId" class="form-label">Category</label>
+                <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.Categories">
+                    <option value="">-- Select Category --</option>
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="Quantity" class="form-label">Quantity</label>
                 <input type="number" class="form-control" id="Quantity" name="Quantity" asp-for="Quantity">
             </div>

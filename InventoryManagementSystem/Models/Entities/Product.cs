@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InventoryManagementSystem.Models.Entities
 {
@@ -14,5 +15,12 @@ namespace InventoryManagementSystem.Models.Entities
         [Required]
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
+
+        // Foreign Key for Category
+        public int? CategoryId { get; set; }
+
+        // Navigation Property
+        [ForeignKey("CategoryId")]
+        public Category? Category { get; set; }
     }
 }

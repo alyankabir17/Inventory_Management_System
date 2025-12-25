@@ -3,6 +3,8 @@ using InventoryManagementSystem.Models.AddModels;
 using InventoryManagementSystem.Models.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace InventoryManagementSystem.Controllers
 {
@@ -46,7 +48,7 @@ namespace InventoryManagementSystem.Controllers
         {
             if (IsUser())
             {
-                var products = db.Products.ToList();
+                var products = db.Products.Include(p => p.Category).ToList();
                 return View(products);
             } 
             else
@@ -58,6 +60,8 @@ namespace InventoryManagementSystem.Controllers
         // GET: ProductController/Create
         public ActionResult Create()
         {
+            // Load categories for dropdown
+            ViewBag.Categories = new SelectList(db.Categories.ToList(), "Id", "Name");
             return View();
         }
 
@@ -70,6 +74,7 @@ namespace InventoryManagementSystem.Controllers
             {
                 if (addProduct.Name == "" || addProduct.Description == "" || addProduct.Quantity == null || addProduct.UnitPrice == null)
                 {
+                    ViewBag.Categories = new SelectList(db.Categories.ToList(), "Id", "Name");
                     return View(addProduct);
                 }
                 else
@@ -79,7 +84,8 @@ namespace InventoryManagementSystem.Controllers
                         Name = addProduct.Name,
                         Description = addProduct.Description,
                         Quantity = addProduct.Quantity,
-                        UnitPrice = addProduct.UnitPrice
+                        UnitPrice = addProduct.UnitPrice,
+                        CategoryId = addProduct.CategoryId
                     };
 
                     db.Products.Add(product);
@@ -90,6 +96,7 @@ namespace InventoryManagementSystem.Controllers
             }
             catch
             {
+                ViewBag.Categories = new SelectList(db.Categories.ToList(), "Id", "Name");
                 return View(addProduct);
             }
         }
@@ -106,6 +113,8 @@ namespace InventoryManagementSystem.Controllers
                 }
                 else
                 {
+                    // Load categories for dropdown
+                    ViewBag.Categories = new SelectList(db.Categories.ToList(), "Id", "Name", productFromDb.CategoryId);
                     return View(productFromDb);
                 }
             } 
@@ -133,6 +142,7 @@ namespace InventoryManagementSystem.Controllers
                     productFromDb.Description = product.Description;
                     productFromDb.Quantity = product.Quantity;
                     productFromDb.UnitPrice = product.UnitPrice;
+                    productFromDb.CategoryId = product.CategoryId;
 
                     db.SaveChanges();
 
@@ -141,6 +151,7 @@ namespace InventoryManagementSystem.Controllers
             }
             catch
             {
+                ViewBag.Categories = new SelectList(db.Categories.ToList(), "Id", "Name", product.CategoryId);
                 return View(product);
             }
         }

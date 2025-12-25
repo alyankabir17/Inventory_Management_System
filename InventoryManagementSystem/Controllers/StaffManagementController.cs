@@ -41,6 +41,7 @@ namespace InventoryManagementSystem.Controllers
 
             return View(staffMembers);
         }
+        
 
         // GET: StaffManagement/Create
         public IActionResult Create()

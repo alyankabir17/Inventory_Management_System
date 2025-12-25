@@ -47,6 +47,7 @@
                         <tr>
                             <th class="fw-bold">ID</th>
                             <th class="fw-bold">Product Name</th>
+                            <th class="fw-bold">Category</th>
                             <th class="fw-bold">Description</th>
                             <th class="fw-bold text-center">Quantity</th>
                             <th class="fw-bold text-center">Stock Status</th>
@@ -62,6 +63,16 @@
                                 <tr>
                                     <td class="align-middle">@product.Id</td>
                                     <td class="align-middle fw-semibold text-primary">@product.Name</td>
+                                    <td class="align-middle">
+                                        @if (product.Category != null)
+                                        {
+                                            <span class="badge bg-secondary">@product.Category.Name</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">N/A</span>
+                                        }
+                                    </td>
                                     <td class="align-middle text-muted">@product.Description</td>
                                     <td class="align-middle text-center">
                                         <span class="badge bg-info fs-6">@product.Quantity</span>
@@ -117,7 +128,7 @@
                         else
                         {
                             <tr>
-                                <td colspan="7" class="text-center py-5 text-muted">
+                                <td colspan="8" class="text-center py-5 text-muted">
                                     <i class="fa fa-box-open fa-4x mb-3 d-block opacity-25"></i>
                                     <h5>No products found</h5>
                                     <p>Start by adding your first product to the catalog</p>

@@ -17,7 +17,7 @@ namespace InventoryManagementSystem.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var products = await _context.Products.ToListAsync();
+            var products = await _context.Products.Include(p => p.Category).ToListAsync();
             return View(products);
         }
 
