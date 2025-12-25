@@ -3,7 +3,63 @@
   "WorkspaceRootPath": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\category\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malik\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-f1c7deb3-b63c-4995-8695-fd2bac447d56.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\models\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\models\\addmodels\\addstaffmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\addmodels\\addstaffmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\models\\addmodels\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\addmodels\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\models\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\models\\addmodels\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\addmodels\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E66797B9-3CBB-44BD-ABD9-90C1371E6AE5}|IMSClassLib\\IMSClassLib.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\imsclasslib\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -16,10 +72,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\SECURITY_UPDATE_LOGIN_SCREEN.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -38,18 +90,6 @@
       "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\staffmanagement\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\models\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\models\\addmodels\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\models\\addmodels\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -62,8 +102,24 @@
       "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\controllers\\lowstockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\controllers\\lowstockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\lowstock\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\lowstock\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|e:\\study material\\6th semester material\\vp lab\\oel\\inventorymanagementsystem\\inventorymanagementsystem\\views\\shared\\_dashlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5957FE53-0750-CA6C-54A2-88EDAA0B85B8}|InventoryManagementSystem\\InventoryManagementSystem.csproj|solutionrelative:inventorymanagementsystem\\views\\shared\\_dashlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -73,7 +129,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 365,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,20 +145,213 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "StoreController.cs",
-              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\StoreController.cs",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\StoreController.cs",
-              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\StoreController.cs",
-              "RelativeToolTip": "InventoryManagementSystem\\Controllers\\StoreController.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T06:48:59.782Z",
+              "DocumentIndex": 0,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Category\\Delete.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Category\\Delete.cshtml",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Category\\Delete.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Category\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T08:20:07.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Category\\Create.cshtml",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T08:20:01.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_DashLayout.cshtml",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Shared\\_DashLayout.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Shared\\_DashLayout.cshtml",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Shared\\_DashLayout.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Shared\\_DashLayout.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T08:19:46.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\appsettings.json",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\appsettings.json",
+              "RelativeToolTip": "InventoryManagementSystem\\appsettings.json",
+              "ViewState": "AgIAAAsAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-25T08:19:01.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAM0AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T08:18:37.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\LowStock\\Index.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\LowStock\\Index.cshtml",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\LowStock\\Index.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\LowStock\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T08:10:08.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LowStockController.cs",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\LowStockController.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\LowStockController.cs",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\LowStockController.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Controllers\\LowStockController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T08:09:32.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "plan-f1c7deb3-b63c-4995-8695-fd2bac447d56.md",
+              "DocumentMoniker": "C:\\Users\\malik\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-f1c7deb3-b63c-4995-8695-fd2bac447d56.md",
+              "ToolTip": "C:\\Users\\malik\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-f1c7deb3-b63c-4995-8695-fd2bac447d56.md [Read Only]",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-25T08:09:14.629Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T08:02:01.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Category.cs",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Models\\Entities\\Category.cs",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\Entities\\Category.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Models\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:28:26.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddStaffMember.cs",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\AddModels\\AddStaffMember.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Models\\AddModels\\AddStaffMember.cs",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\AddModels\\AddStaffMember.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Models\\AddModels\\AddStaffMember.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwB4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:27:24.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddUser.cs",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\AddModels\\AddUser.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Models\\AddModels\\AddUser.cs",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\AddModels\\AddUser.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Models\\AddModels\\AddUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:27:08.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\UserController.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:25:55.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Program.cs",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Program.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T07:22:36.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "README.md",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-12-25T07:13:29.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\User\\Login.cshtml",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "InventoryManagementSystem\\Views\\User\\Login.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-22T13:43:28.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Product\\Create.cshtml",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Product\\Create.cshtml",
@@ -115,57 +364,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ProductController.cs",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\ProductController.cs",
               "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\ProductController.cs",
               "RelativeToolTip": "InventoryManagementSystem\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-25T06:43:13.912Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AddProduct.cs",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\AddModels\\AddProduct.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Models\\AddModels\\AddProduct.cs",
               "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\AddModels\\AddProduct.cs",
               "RelativeToolTip": "InventoryManagementSystem\\Models\\AddModels\\AddProduct.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAIBYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAawAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-25T06:43:03.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Product.cs",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Models\\Entities\\Product.cs",
               "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Models\\Entities\\Product.cs",
               "RelativeToolTip": "InventoryManagementSystem\\Models\\Entities\\Product.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAMBUwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-25T06:42:53.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "plan-f1c7deb3-b63c-4995-8695-fd2bac447d56.md",
-              "DocumentMoniker": "C:\\Users\\malik\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-f1c7deb3-b63c-4995-8695-fd2bac447d56.md",
-              "ToolTip": "C:\\Users\\malik\\AppData\\Local\\Temp\\VisualStudio\\copilot-vs\\plan-f1c7deb3-b63c-4995-8695-fd2bac447d56.md [Read Only]",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-12-25T06:42:41.198Z",
-              "EditorCaption": " [Read Only]"
+              "DocumentIndex": 14,
+              "Title": "StoreController.cs",
+              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\StoreController.cs",
+              "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\StoreController.cs",
+              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\StoreController.cs",
+              "RelativeToolTip": "InventoryManagementSystem\\Controllers\\StoreController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAD4vwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T06:48:59.782Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Product\\Edit.cshtml",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Product\\Edit.cshtml",
@@ -178,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\Product\\Index.cshtml",
@@ -191,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "InventoryManager.cs",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\IMSClassLib\\InventoryManager.cs",
               "RelativeDocumentMoniker": "IMSClassLib\\InventoryManager.cs",
@@ -204,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "Create.cshtml",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\User\\Create.cshtml",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\User\\Create.cshtml",
@@ -217,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 16,
               "Title": "StaffManagementController.cs",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Controllers\\StaffManagementController.cs",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Controllers\\StaffManagementController.cs",
@@ -230,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
               "Title": "Inactive.cshtml",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\StaffManagement\\Inactive.cshtml",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\StaffManagement\\Inactive.cshtml",
@@ -243,20 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\User\\Login.cshtml",
-              "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\User\\Login.cshtml",
-              "ToolTip": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\User\\Login.cshtml",
-              "RelativeToolTip": "InventoryManagementSystem\\Views\\User\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-22T13:43:28.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "Details.cshtml",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\InventoryManagementSystem\\Views\\StaffManagement\\Details.cshtml",
               "RelativeDocumentMoniker": "InventoryManagementSystem\\Views\\StaffManagement\\Details.cshtml",
@@ -269,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "ADMIN_ROLE_FIX.md",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\ADMIN_ROLE_FIX.md",
               "RelativeDocumentMoniker": "ADMIN_ROLE_FIX.md",
@@ -282,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 18,
               "Title": "SECURITY_UPDATE_LOGIN_SCREEN.md",
               "DocumentMoniker": "E:\\study material\\6th semester material\\VP LAB\\OEL\\InventoryManagementSystem\\SECURITY_UPDATE_LOGIN_SCREEN.md",
               "RelativeDocumentMoniker": "SECURITY_UPDATE_LOGIN_SCREEN.md",

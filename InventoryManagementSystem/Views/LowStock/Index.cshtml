@@ -1,0 +1,263 @@
+@using InventoryManagementSystem.Models.Entities
+@using IMSClassLib
+
+@model List<Product>
+
+@{
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+    ViewData["Title"] = "Low Stock Alert";
+}
+
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="card-body p-4 text-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h2 class="fw-bold mb-2">
+                                <i class="fa fa-exclamation-triangle me-2"></i>Low Stock Alert
+                            </h2>
+                            <p class="mb-0 opacity-75">
+                                <i class="fa fa-box me-2"></i>
+                                Products below @ViewBag.LowStockThreshold units requiring immediate attention
+                            </p>
+                        </div>
+                        <div>
+                            <a asp-controller="Dashboard" asp-action="Index" class="btn btn-light me-2">
+                                <i class="fa fa-arrow-left me-2"></i>Back to Dashboard
+                            </a>
+                            <a asp-controller="Purchase" asp-action="Create" class="btn btn-warning text-dark fw-bold shadow">
+                                <i class="fa fa-cart-shopping me-2"></i>Restock Inventory
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row mb-4 g-3">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm bg-danger bg-opacity-10">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-uppercase small text-danger mb-2">Critical Items</h6>
+                            <h3 class="fw-bold mb-0">@ViewBag.TotalLowStockItems</h3>
+                            <small class="text-muted">Products need restocking</small>
+                        </div>
+                        <div class="fs-1 text-danger opacity-50">
+                            <i class="fa fa-exclamation-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm bg-warning bg-opacity-10">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-uppercase small text-warning mb-2">Threshold Level</h6>
+                            <h3 class="fw-bold mb-0">< @ViewBag.LowStockThreshold</h3>
+                            <small class="text-muted">Units trigger alert</small>
+                        </div>
+                        <div class="fs-1 text-warning opacity-50">
+                            <i class="fa fa-gauge-high"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm bg-info bg-opacity-10">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-uppercase small text-info mb-2">Low Stock Value</h6>
+                            <h3 class="fw-bold mb-0">$@ViewBag.TotalLowStockValue.ToString("N2")</h3>
+                            <small class="text-muted">Total inventory value at risk</small>
+                        </div>
+                        <div class="fs-1 text-info opacity-50">
+                            <i class="fa fa-dollar-sign"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Low Stock Products Table -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-header bg-danger text-white">
+            <h5 class="mb-0">
+                <i class="fa fa-list me-2"></i>Products Requiring Immediate Restocking
+            </h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="fw-bold">ID</th>
+                            <th class="fw-bold">Product Name</th>
+                            <th class="fw-bold">Category</th>
+                            <th class="fw-bold text-center">Current Stock</th>
+                            <th class="fw-bold text-center">Status</th>
+                            <th class="fw-bold text-end">Unit Price</th>
+                            <th class="fw-bold text-end">Total Value</th>
+                            <th class="fw-bold text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var product in Model)
+                            {
+                                <tr class="@(product.Quantity == 0 ? "table-danger" : product.Quantity <= 2 ? "table-warning" : "")">
+                                    <td class="align-middle">@product.Id</td>
+                                    <td class="align-middle fw-semibold">
+                                        <i class="fa fa-box text-primary me-2"></i>@product.Name
+                                    </td>
+                                    <td class="align-middle">
+                                        @if (product.Category != null)
+                                        {
+                                            <span class="badge bg-secondary">@product.Category.Name</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">N/A</span>
+                                        }
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <span class="badge bg-danger fs-6">@product.Quantity</span>
+                                    </td>
+
+                                    @{
+                                        var inventory = new InventoryManager();
+                                        var status = inventory.CheckStockStatus(product.Quantity);
+                                    }
+
+                                    <td class="align-middle text-center">
+                                        @if (product.Quantity == 0)
+                                        {
+                                            <span class="badge bg-danger">
+                                                <i class="fa fa-ban me-1"></i>OUT OF STOCK
+                                            </span>
+                                        }
+                                        else if (product.Quantity <= 2)
+                                        {
+                                            <span class="badge bg-danger">
+                                                <i class="fa fa-exclamation-triangle me-1"></i>CRITICAL
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning text-dark">
+                                                <i class="fa fa-exclamation-circle me-1"></i>LOW STOCK
+                                            </span>
+                                        }
+                                    </td>
+
+                                    <td class="align-middle text-end fw-bold text-success">
+                                        $@product.UnitPrice.ToString("N2")
+                                    </td>
+
+                                    <td class="align-middle text-end fw-bold">
+                                        $@((product.UnitPrice * product.Quantity).ToString("N2"))
+                                    </td>
+
+                                    <td class="align-middle text-center">
+                                        <div class="btn-group" role="group">
+                                            <a asp-controller="Purchase" asp-action="Create" 
+                                               class="btn btn-sm btn-success" 
+                                               title="Restock this product">
+                                                <i class="fa fa-cart-plus me-1"></i>Restock
+                                            </a>
+                                            <a asp-controller="Product" asp-action="Edit" 
+                                               asp-route-id="@product.Id" 
+                                               class="btn btn-sm btn-primary" 
+                                               title="Edit product details">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="8" class="text-center py-5">
+                                    <div class="text-success">
+                                        <i class="fa fa-check-circle fa-4x mb-3 opacity-25"></i>
+                                        <h5 class="text-success">All Products in Stock!</h5>
+                                        <p class="text-muted">No products are below the low stock threshold of @ViewBag.LowStockThreshold units.</p>
+                                        <a asp-controller="Product" asp-action="Index" class="btn btn-primary mt-2">
+                                            <i class="fa fa-box me-2"></i>View All Products
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm bg-light">
+                <div class="card-body">
+                    <h6 class="fw-bold mb-3">
+                        <i class="fa fa-info-circle text-primary me-2"></i>Quick Actions Guide
+                    </h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start mb-2">
+                                <i class="fa fa-cart-plus text-success me-2 mt-1"></i>
+                                <div>
+                                    <strong>Restock:</strong> Create purchase order to replenish inventory
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start mb-2">
+                                <i class="fa fa-edit text-primary me-2 mt-1"></i>
+                                <div>
+                                    <strong>Edit:</strong> Update product details or pricing
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start mb-2">
+                                <i class="fa fa-gauge-high text-warning me-2 mt-1"></i>
+                                <div>
+                                    <strong>Threshold:</strong> Currently set to @ViewBag.LowStockThreshold units
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table tbody tr:hover {
+        background-color: rgba(248, 249, 250, 0.8);
+    }
+
+    .badge {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+</style>

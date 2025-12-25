@@ -50,18 +50,23 @@
         </div>
 
         <div class="col-md-3">
-            <div class="stat-card bg-gradient-danger shadow-lg">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h6 class="text-uppercase small mb-2 opacity-75">Low Stock Alert</h6>
-                        <h2 class="display-4 fw-bold mb-0">@ViewBag.LowStock</h2>
-                        <p class="small mb-0 mt-2">Need reordering (< 5)</p>
-                    </div>
-                    <div class="fs-1 opacity-50">
-                        <i class="fa fa-exclamation-triangle"></i>
+            <a asp-controller="LowStock" asp-action="Index" class="text-decoration-none">
+                <div class="stat-card bg-gradient-danger shadow-lg clickable-card">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h6 class="text-uppercase small mb-2 opacity-75">Low Stock Alert</h6>
+                            <h2 class="display-4 fw-bold mb-0">@ViewBag.LowStock</h2>
+                            <p class="small mb-0 mt-2">
+                                Need reordering (< 5)
+                                <i class="fa fa-arrow-right ms-2"></i>
+                            </p>
+                        </div>
+                        <div class="fs-1 opacity-50">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="col-md-3">
@@ -166,3 +171,38 @@
         </div>
     </div>
 </div>
+
+<style>
+    .clickable-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .clickable-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .stat-card {
+        color: white;
+        border-radius: 15px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .bg-gradient-danger {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .bg-gradient-success {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .bg-gradient-info {
+        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+</style>
