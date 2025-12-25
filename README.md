@@ -1,4 +1,4 @@
-    # ?? Inventory Management System
+## ?? Inventory_Management System
 
 A full-featured **Inventory Management System** built with **ASP.NET Core MVC** and **Entity Framework Core**. This system provides comprehensive inventory tracking, point-of-sale functionality, customer management, and detailed reporting capabilities.
 
