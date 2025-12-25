@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # ?? Inventory Management System
+=======
+# 📦 Inventory Management System
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 A full-featured **Inventory Management System** built with **ASP.NET Core MVC** and **Entity Framework Core**. This system provides comprehensive inventory tracking, point-of-sale functionality, customer management, and detailed reporting capabilities.
 
@@ -9,14 +13,21 @@ A full-featured **Inventory Management System** built with **ASP.NET Core MVC** 
 
 ---
 
+<<<<<<< HEAD
 ## ?? Features
 
 ### ?? Authentication & Authorization
+=======
+## 🌟 Features
+
+### 🔐 Authentication & Authorization
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 - **Secure Login System** with session management
 - **Role-Based Access Control** (Admin & Staff roles)
 - **Admin Dashboard** with full system access
 - **Staff Management** module for employee tracking
 
+<<<<<<< HEAD
 ### ?? Inventory Management
 - ? **Product Catalog** - Add, edit, delete, and view products
 - ??? **Category System** - Organize products by categories
@@ -51,6 +62,42 @@ A full-featured **Inventory Management System** built with **ASP.NET Core MVC** 
 ---
 
 ## ??? Technology Stack
+=======
+### 📊 Inventory Management
+- ✅ **Product Catalog** - Add, edit, delete, and view products
+- 🏷️ **Category System** - Organize products by categories
+- 📦 **Stock Level Tracking** - Real-time inventory monitoring
+- ⚠️ **Low Stock Alerts** - Automatic notifications for items below threshold
+- 💰 **Inventory Valuation** - Calculate total inventory worth
+
+### 🛒 Point of Sale (POS)
+- 💳 **POS Terminal** - Quick and intuitive sales interface
+- 🧾 **Transaction Processing** - Process customer purchases
+- 👥 **Customer Management** - Track favorite customers
+- 📈 **Purchase History** - Detailed sales records
+
+### 📋 Supply Chain Management
+- 🚚 **Supplier Management** - Maintain supplier database
+- 📦 **Purchase Orders** - Track inventory restocking
+- 📊 **Restock History** - Monitor purchase patterns
+
+### 📈 Reports & Analytics
+- 📊 **Sales Reports** - Track daily, weekly, and monthly sales
+- 💹 **Revenue Analytics** - Monitor financial performance
+- 📉 **Inventory Reports** - Stock level analysis
+- 👥 **Customer Analytics** - Track customer purchase behavior
+
+### 👨‍💼 Staff Management (Admin Only)
+- 👤 **Employee Records** - Comprehensive staff database
+- 📅 **Attendance Tracking** - Monitor work schedules
+- 💼 **Department Management** - Organize by departments
+- 💵 **Salary Information** - Track compensation details
+- ✅ **Active/Inactive Status** - Manage employee status
+
+---
+
+## 🛠️ Technology Stack
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ### Backend
 - **Framework:** ASP.NET Core 8.0 MVC
@@ -71,7 +118,11 @@ A full-featured **Inventory Management System** built with **ASP.NET Core MVC** 
 
 ---
 
+<<<<<<< HEAD
 ## ?? Prerequisites
+=======
+## 📋 Prerequisites
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 Before running this project, ensure you have:
 
@@ -82,16 +133,26 @@ Before running this project, ensure you have:
 
 ---
 
+<<<<<<< HEAD
 ## ?? Installation & Setup
 
 ### 1?? Clone the Repository
+=======
+## 🚀 Installation & Setup
+
+### 1️⃣ Clone the Repository
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ```bash
 git clone https://github.com/alyankabir17/Inventory_Management_System.git
 cd InventoryManagementSystem
 ```
 
+<<<<<<< HEAD
 ### 2?? Update Database Connection String
+=======
+### 2️⃣ Update Database Connection String
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 Open `appsettings.json` in the `InventoryManagementSystem` project and update the connection string:
 
@@ -105,13 +166,21 @@ Open `appsettings.json` in the `InventoryManagementSystem` project and update th
 
 Replace `YOUR_SERVER_NAME` with your SQL Server instance name (e.g., `localhost`, `.\\SQLEXPRESS`).
 
+<<<<<<< HEAD
 ### 3?? Restore Dependencies
+=======
+### 3️⃣ Restore Dependencies
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ```bash
 dotnet restore
 ```
 
+<<<<<<< HEAD
 ### 4?? Apply Database Migrations
+=======
+### 4️⃣ Apply Database Migrations
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ```bash
 cd InventoryManagementSystem
@@ -120,7 +189,11 @@ dotnet ef database update
 
 This will create the database and all required tables automatically.
 
+<<<<<<< HEAD
 ### 5?? Run the Application
+=======
+### 5️⃣ Run the Application
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ```bash
 dotnet run
@@ -136,7 +209,11 @@ The application will be available at:
 
 ---
 
+<<<<<<< HEAD
 ## ?? Default Login Credentials
+=======
+## 🔑 Default Login Credentials
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 A default admin account is automatically created on first run:
 
@@ -144,6 +221,7 @@ A default admin account is automatically created on first run:
 - **Password:** `admin123`
 - **Role:** Admin
 
+<<<<<<< HEAD
 ?? **Important:** Change the default password after first login in a production environment!
 
 ---
@@ -182,11 +260,55 @@ InventoryManagementSystem/
 ??? ?? IMSClassLib/                        # Custom business logic library
 ?   ??? InventoryManager.cs                # Stock management logic
 ??? README.md                              # This file
+=======
+⚠️ **Important:** Change the default password after first login in a production environment!
+
+---
+
+## 📁 Project Structure
+
+```
+InventoryManagementSystem/
+├── 📂 InventoryManagementSystem/          # Main web application
+│   ├── 📂 Controllers/                    # MVC Controllers
+│   │   ├── ProductController.cs           # Product management
+│   │   ├── CategoryController.cs          # Category management
+│   │   ├── StoreController.cs             # POS terminal
+│   │   ├── StaffManagementController.cs   # Staff management
+│   │   └── ...
+│   ├── 📂 Models/
+│   │   ├── 📂 Entities/                   # Database entities
+│   │   │   ├── Product.cs
+│   │   │   ├── Category.cs
+│   │   │   ├── Sale.cs
+│   │   │   └── ...
+│   │   ├── 📂 AddModels/                  # DTOs for creating records
+│   │   └── ApplicationDbContext.cs        # EF Core DbContext
+│   ├── 📂 Views/                          # Razor Views
+│   │   ├── 📂 Product/                    # Product views
+│   │   ├── 📂 Category/                   # Category views
+│   │   ├── 📂 Store/                      # POS views
+│   │   ├── 📂 Shared/                     # Shared layouts
+│   │   │   ├── _Layout.cshtml
+│   │   │   └── _DashLayout.cshtml
+│   │   └── ...
+│   ├── 📂 wwwroot/                        # Static files (CSS, JS, images)
+│   ├── 📂 Migrations/                     # EF Core migrations
+│   ├── appsettings.json                   # Configuration
+│   └── Program.cs                         # Application entry point
+├── 📂 IMSClassLib/                        # Custom business logic library
+│   └── InventoryManager.cs                # Stock management logic
+└── README.md                              # This file
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 ```
 
 ---
 
+<<<<<<< HEAD
 ## ?? Database Schema
+=======
+## 📚 Database Schema
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ### Core Tables
 
@@ -203,6 +325,7 @@ InventoryManagementSystem/
 
 ### Entity Relationships
 
+<<<<<<< HEAD
 - **Product** ? **Category** (Many-to-One)
 - **Sale** ? **Product** (Many-to-One)
 - **Sale** ? **FavoriteCustomer** (Many-to-One, Optional)
@@ -212,6 +335,17 @@ InventoryManagementSystem/
 ---
 
 ## ?? Key Functionalities
+=======
+- **Product** → **Category** (Many-to-One)
+- **Sale** → **Product** (Many-to-One)
+- **Sale** → **FavoriteCustomer** (Many-to-One, Optional)
+- **Purchase** → **Product** (Many-to-One)
+- **Purchase** → **Supplier** (Many-to-One)
+
+---
+
+## 🎯 Key Functionalities
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ### Product Management
 ```csharp
@@ -247,7 +381,11 @@ var status = inventory.CheckStockStatus(product.Quantity);
 
 ---
 
+<<<<<<< HEAD
 ## ?? User Interface
+=======
+## 🎨 User Interface
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ### Dashboard
 - **Statistics Cards:** Quick overview of products, low stock, inventory value
@@ -267,6 +405,7 @@ var status = inventory.CheckStockStatus(product.Quantity);
 
 ---
 
+<<<<<<< HEAD
 ## ?? Security Features
 
 - ? **Session-Based Authentication** - Secure user sessions
@@ -278,6 +417,19 @@ var status = inventory.CheckStockStatus(product.Quantity);
 ---
 
 ## ?? Available Migrations
+=======
+## 🔒 Security Features
+
+- ✅ **Session-Based Authentication** - Secure user sessions
+- ✅ **Anti-Forgery Tokens** - CSRF protection on forms
+- ✅ **Role-Based Authorization** - Restrict admin features
+- ✅ **SQL Injection Prevention** - Parameterized queries via EF Core
+- ✅ **Connection String Security** - Stored in appsettings.json
+
+---
+
+## 📊 Available Migrations
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ```bash
 # View applied migrations
@@ -295,7 +447,11 @@ dotnet ef database update PreviousMigrationName
 
 ---
 
+<<<<<<< HEAD
 ## ?? Testing
+=======
+## 🧪 Testing
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ### Manual Testing Workflow
 
@@ -309,7 +465,11 @@ dotnet ef database update PreviousMigrationName
 
 ---
 
+<<<<<<< HEAD
 ## ?? Troubleshooting
+=======
+## 🐛 Troubleshooting
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ### Database Connection Issues
 ```bash
@@ -337,7 +497,11 @@ dotnet run --urls "https://localhost:5001;http://localhost:5000"
 
 ---
 
+<<<<<<< HEAD
 ## ?? Contributing
+=======
+## 🤝 Contributing
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 Contributions are welcome! Please follow these steps:
 
@@ -349,7 +513,11 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
+<<<<<<< HEAD
 ## ?? To-Do / Future Enhancements
+=======
+## 📝 To-Do / Future Enhancements
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 - [ ] Add barcode scanning support
 - [ ] Implement advanced reporting with charts
@@ -364,13 +532,21 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
+<<<<<<< HEAD
 ## ?? License
+=======
+## 📄 License
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
+<<<<<<< HEAD
 ## ????? Author
+=======
+## 👨‍💻 Author
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 **Alyan Kabir**
 - GitHub: [@alyankabir17](https://github.com/alyankabir17)
@@ -378,7 +554,11 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
+<<<<<<< HEAD
 ## ?? Support
+=======
+## 📞 Support
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 If you encounter any issues or have questions:
 
@@ -388,7 +568,11 @@ If you encounter any issues or have questions:
 
 ---
 
+<<<<<<< HEAD
 ## ?? Acknowledgments
+=======
+## 🙏 Acknowledgments
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 - Built with **ASP.NET Core** and **Entity Framework Core**
 - UI components powered by **Bootstrap 5**
@@ -397,7 +581,11 @@ If you encounter any issues or have questions:
 
 ---
 
+<<<<<<< HEAD
 ## ?? Screenshots
+=======
+## 📸 Screenshots
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ### Dashboard
 ![Dashboard](docs/screenshots/dashboard.png)
@@ -419,7 +607,11 @@ If you encounter any issues or have questions:
 
 ---
 
+<<<<<<< HEAD
 ## ?? Deployment
+=======
+## 🚀 Deployment
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 ### Deploying to Azure
 
@@ -438,7 +630,11 @@ If you encounter any issues or have questions:
 
 ---
 
+<<<<<<< HEAD
 ## ?? Version History
+=======
+## 📈 Version History
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 - **v1.2.0** - Added category system to products
 - **v1.1.0** - Implemented favorite customer tracking
@@ -448,8 +644,14 @@ If you encounter any issues or have questions:
 
 <div align="center">
 
+<<<<<<< HEAD
 **? If you find this project helpful, please consider giving it a star!**
 
 Made with ?? using ASP.NET Core
+=======
+**⭐ If you find this project helpful, please consider giving it a star!**
+
+Made with ❤️ using ASP.NET Core
+>>>>>>> 0f5c3f45880cc858ea473a643a7e1f46a6953db9
 
 </div>
